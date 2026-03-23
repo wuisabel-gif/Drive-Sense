@@ -29,6 +29,9 @@ The iPhone app focuses on:
 
 Open the iPhone project in Xcode:
 
+<img width="1170" height="2532" alt="demo-trip-detail" src="https://github.com/user-attachments/assets/8e8b7955-e5dd-4e26-a4da-2de2ca00fa5d" />
+<img width="1170" height="2532" alt="demo-highway" src="https://github.com/user-attachments/assets/df829ca6-cf48-4cb6-9085-46aaf2efa164" />
+
 ```text
 ios/DriveSensePhone/DriveSensePhone.xcodeproj
 ```
