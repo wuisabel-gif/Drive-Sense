@@ -112,7 +112,3 @@ For a client-facing presentation, the strongest setup is:
 - The iPhone Simulator for a guided live demo
 - GitHub Pages for a clickable browser preview
 - A few screenshots or a short demo video in the repository
-# Drive-Sense
-# Drive-Sense
-# Drive-Sense
-# Drive-Sense

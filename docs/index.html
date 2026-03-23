@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DriveSense Demo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Mileage Tracking App</p>
+        <h1>Track business miles automatically. Review every trip clearly.</h1>
+        <p class="hero-text">
+          DriveSense is built for self-employed professionals and small business owners who want cleaner mileage records, easier tax-time review, and a better understanding of how they drive day to day.
+        </p>
+        <div class="hero-checklist" aria-label="Core benefits">
+          <span>Automatic business trip capture</span>
+          <span>Mileage history for tax filing</span>
+          <span>Driving habit review</span>
+        </div>
+        <div class="hero-actions">
+          <a class="primary-button" href="#demo">Open Demo</a>
+          <a class="secondary-button" href="#workflow">How It Works</a>
+        </div>
+      </div>
+      <div class="hero-panel hero-preview">
+        <div class="hero-panel-copy">
+          <p class="section-label">Product Preview</p>
+          <h2>Built for mileage logs, trip records, and driving review.</h2>
+          <p class="panel-text">
+            The app keeps business-trip history organized and gives users a simple way to review route totals, trip quality, and day-to-day driving patterns.
+          </p>
+        </div>
+        <div class="hero-shot-grid">
+          <figure class="shot-card">
+            <img src="assets/demo-home.png" alt="DriveSense home screen preview" onerror="this.parentElement.classList.add('missing'); this.remove();">
+            <figcaption>Home overview</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="assets/demo-highway.png" alt="DriveSense highway live trip screen preview" onerror="this.parentElement.classList.add('missing'); this.remove();">
+            <figcaption>Highway live trip</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="assets/demo-city.png" alt="DriveSense city trip screen preview" onerror="this.parentElement.classList.add('missing'); this.remove();">
+            <figcaption>City trip</figcaption>
+          </figure>
+          <figure class="shot-card">
+            <img src="assets/demo-trip-detail.png" alt="DriveSense trip detail screen preview" onerror="this.parentElement.classList.add('missing'); this.remove();">
+            <figcaption>Trip detail</figcaption>
+          </figure>
+        </div>
+      </div>
+    </header>
+
+    <main id="demo" class="demo-layout">
+      <section class="control-panel">
+        <div class="panel-card">
+          <p class="section-label">Demo Trips</p>
+          <h2>Choose a trip to preview business mileage tracking and driver insights.</h2>
+          <p class="panel-text">
+            Each sample includes phone-detected driving behavior, trip scoring, mileage totals, and a short trip summary suitable for a real DriveSense session.
+          </p>
+          <div id="trip-list" class="trip-list" aria-label="Sample trips"></div>
+        </div>
+
+        <div class="panel-card">
+          <p class="section-label">What The Phone Measures</p>
+          <div class="capabilities">
+            <span>Business mileage</span>
+            <span>Distance</span>
+            <span>Duration</span>
+            <span>Average speed</span>
+            <span>Top speed</span>
+            <span>Stopped time</span>
+            <span>Harsh braking estimate</span>
+            <span>Rapid acceleration estimate</span>
+            <span>Trip score</span>
+          </div>
+        </div>
+
+        <div class="panel-card">
+          <p class="section-label">Business Use</p>
+          <p class="panel-text">
+            DriveSense is designed to help users keep clearer records of business driving that may support deductible mileage or reimbursement tracking. It gives users one place to review trip distance, timing, and driving patterns instead of reconstructing mileage later.
+          </p>
+        </div>
+      </section>
+
+      <section class="phone-stage" aria-label="Phone app preview">
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <div class="status-strip">
+              <span>9:41</span>
+              <span>DriveSense</span>
+              <span>100%</span>
+            </div>
+
+            <section class="screen-card screen-card-primary">
+              <div class="screen-card-header">
+                <div>
+                  <p class="screen-label">Mileage Tracking</p>
+                  <h3 id="hero-trip-title">Evening Commute</h3>
+                </div>
+                <span id="trip-score-badge" class="score-badge">82</span>
+              </div>
+              <p id="hero-trip-summary" class="screen-summary"></p>
+            </section>
+
+            <section class="metrics-grid">
+              <article class="metric-card">
+                <span>Business Miles</span>
+                <strong id="distance-value">0 mi</strong>
+              </article>
+              <article class="metric-card">
+                <span>Duration</span>
+                <strong id="duration-value">0 min</strong>
+              </article>
+              <article class="metric-card">
+                <span>Average Speed</span>
+                <strong id="avg-speed-value">0 mph</strong>
+              </article>
+              <article class="metric-card">
+                <span>Stopped Time</span>
+                <strong id="stopped-value">0 min</strong>
+              </article>
+            </section>
+
+            <section class="screen-card">
+              <div class="screen-card-header compact">
+                <div>
+                  <p class="screen-label">Trip Summary</p>
+                  <h3>Driver Notes</h3>
+                </div>
+              </div>
+              <p id="trip-summary" class="ai-body"></p>
+            </section>
+
+            <section class="screen-card">
+              <div class="screen-card-header compact">
+                <div>
+                  <p class="screen-label">Trip Detail</p>
+                  <h3>Behavior Signals</h3>
+                </div>
+              </div>
+              <div class="signal-grid">
+                <div class="signal-pill">
+                  <span>Hard Brakes</span>
+                  <strong id="brakes-value">0</strong>
+                </div>
+                <div class="signal-pill">
+                  <span>Rapid Accels</span>
+                  <strong id="accels-value">0</strong>
+                </div>
+                <div class="signal-pill">
+                  <span>Top Speed</span>
+                  <strong id="top-speed-value">0 mph</strong>
+                </div>
+                <div class="signal-pill">
+                  <span>Trip Quality</span>
+                  <strong id="quality-label">Balanced</strong>
+                </div>
+              </div>
+            </section>
+
+            <nav class="tab-bar" aria-label="App tabs">
+              <button class="tab active">Home</button>
+              <button class="tab">Trips</button>
+              <button class="tab">History</button>
+              <button class="tab">Settings</button>
+            </nav>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <section id="workflow" class="workflow">
+      <article class="workflow-card">
+        <p class="section-label">How It Works</p>
+        <h2>Phone sensor signals become a mileage log and a client-ready trip report.</h2>
+        <div class="workflow-steps">
+          <div>
+            <strong>1</strong>
+            <p>Motion and location suggest that a business drive has started.</p>
+          </div>
+          <div>
+            <strong>2</strong>
+            <p>DriveSense records route, mileage, time, and stop patterns.</p>
+          </div>
+          <div>
+            <strong>3</strong>
+            <p>The analyzer scores smoothness, efficiency, and driving behavior for easier review.</p>
+          </div>
+          <div>
+            <strong>4</strong>
+            <p>The app presents the trip as a clean summary for mileage reporting and driving-coach feedback.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer class="site-footer">
+      <p>Copyright Isabel Wu 2026</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
