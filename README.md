@@ -61,28 +61,6 @@ The simulator build is set up to present well to clients:
 - Live speed, distance, and trip-progress visuals during demo playback
 - Trip detail screens that show mileage totals and driving behavior summaries
 
-## GitHub Pages Demo
-
-This repository includes a browser-based product demo in:
-
-```text
-docs/
-```
-
-GitHub Pages can display the web demo, screenshots, and documentation, but it cannot run the native iPhone app itself.
-
-To publish the web demo with GitHub Pages:
-
-1. Push the repository to GitHub.
-2. Open the repository on GitHub.
-3. Go to `Settings > Pages`.
-4. Under `Build and deployment`, choose `Deploy from a branch`.
-5. Select your main branch.
-6. Select the `/docs` folder.
-7. Save.
-
-After publishing, visitors will be able to click your GitHub Pages link and explore the product interface in their browser.
-
 ## Repository Contents
 
 This repository includes:
